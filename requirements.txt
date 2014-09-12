@@ -1,15 +1,12 @@
 #$ curl http://dist.neo4j.org/neo4j-community-2.1.4-unix.tar.gz -O /tmp/neo4j-community.tar.gz
 #$ /tmp/neo4j-community.tar.gz/bin/neo4j console
-nltk
-will
--e git+git@github.com/espeed/espeed/bulbs
 APScheduler==2.1.2
 Jinja2==2.7.2
 MarkupSafe==0.21
 PyYAML==3.11
 args==0.1.0
 bottle==0.12.6
--e git+git@github.com:espeed/bulbs.git@f666fa89b3c99bc0a6b4e964aa1bff70b05a2e96#egg=bulbs-master
+--editable=git+git@github.com:espeed/bulbs.git#egg=bulbs-master
 clint==0.3.7
 dill==0.2b1
 dnspython==1.11.1
@@ -21,6 +18,8 @@ natural==0.1.4
 nltk==3.0.0
 omnijson==0.1.2
 parsedatetime==1.1.2
+https://python-progressbar.googlecode.com/files/progressbar-2.3.tar.gz
+#$ pip install https://python-progressbar.googlecode.com/files/progressbar-2.3.tar.gz
 pyandoc==0.0.1
 pyasn1==0.1.7
 pyasn1-modules==0.0.5
@@ -30,4 +29,5 @@ requests==2.2.1
 six==1.8.0
 sleekxmpp==1.2.5
 -e git+git@github.com:hobson/will.git@cea2144d2aacfc710e231622b41760303d27f199#egg=will-master
+will
 wsgiref==0.1.2
