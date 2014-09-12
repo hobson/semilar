@@ -1,0 +1,5 @@
+#$ curl http://dist.neo4j.org/neo4j-community-2.1.4-unix.tar.gz -O /tmp/neo4j-community.tar.gz
+#$ /tmp/neo4j-community.tar.gz/bin/neo4j console
+nltk
+will
+-e git+git@github.com/espeed/espeed/bulbs
