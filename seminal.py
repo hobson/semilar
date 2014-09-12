@@ -1,3 +1,38 @@
+
+# # install maven
+# cd ~/src
+# wget http://mirrors.gigenet.com/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+# su -c "tar -zxvf apache-maven-3.0.5-bin.tar.gz -C /opt/"
+# cd /opt/apache-maven-3.0.5/
+# cat README.txt 
+# sudo nano /etc/profile.d/maven.sh
+# sudo echo '
+# export M2_HOME=/opt/apache-maven-3.0.5
+# export M2=$M2_HOME/bin
+# PATH=$M2:$PATH 
+# ' | sudo tee /etc/profile.d/maven.sh
+# mvn -v
+# rm ~/src/apache-maven-3.0.5-bin.tar.gz 
+
+# # Install command line REPL for gremlin and neo4j
+# cd ~/src
+# git clone https://github.com/tinkerpop/gremlin.git /home/hobs/src/gremlin
+# cd ../gremlin/
+# mvn clean install
+
+# # install gremlin plugin
+# cd ~/src
+# cd /home/hobs/src
+# git clone git@github.com:neo4j-contrib/gremlin-plugin.git
+# cd /home/hobs/src/gremlin-plugin
+# mvn clean package
+# unzip target/neo4j-gremlin-plugin-2.1-SNAPSHOT-server-plugin.zip -d $NEO4J_ROOT/plugins/gremlin-plugin
+# NEO4J_ROOT=/home/hobs/src/neo4j-community-2.1.4/
+# unzip target/neo4j-gremlin-plugin-2.1-SNAPSHOT-server-plugin.zip -d $NEO4J_ROOT/plugins/gremlin-plugin
+# cd $NEO4J_ROOT
+# ./bin/neo4j restart
+
+
 from py2neo import neo4j
 
 graph_db = neo4j.GraphDatabaseService()

@@ -1,3 +1,4 @@
+raise NotImplemented("Bulbs doesn't work, even with gremlin plugin installed in neo4j")
 #semblance
 # quantify the semantic proximity (similarity) between (of) two words
 
